@@ -8,7 +8,7 @@ class Node:
     def __repr__(self):
         return self.data
 
-    def getById(self, value):
+    def get_by_id(self, value):
         if self.data == value:
             return self
         return None
@@ -87,7 +87,7 @@ class LinkedList:
     def get_instance(self, val):
         import gc
         for g in gc.get_objects():
-            if isinstance(g, Node) and (g.getById(val) != None):
+            if isinstance(g, Node) and (g.get_by_id(val) != None):
                 return g
         return None
     def insertAfter(self, old, val):
